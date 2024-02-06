@@ -1,20 +1,52 @@
 {
-  "name": "slushie/recaptcha-secure-token",
-  "description": "Generate ReCaptcha-compatible secure tokens",
-  "homepage": "https://github.com/slushie/recaptcha-secure-token",
-  "keywords": ["recaptcha", "secure token", "stoken"],
-  "license": "Apache-2.0",
-  "authors": [{
-    "name": "Josh Leder",
-    "email": "slushie@gmail.com"
-  }],
-  "require": {
-    "php": ">= 5.3.3",
-    "ext-mcrypt": "*"
-  },
-  "autoload": {
-    "psr-4": {
-      "ReCaptchaSecureToken\\": "lib/"
-    }
-  }
+    "name": "ducks-project/recaptcha-secure-token",
+    "type": "library",
+    "description": "Generate ReCaptcha-compatible secure tokens",
+    "keywords": [
+        "recaptcha",
+        "secure token",
+        "stoken"
+    ],
+    "homepage": "https://github.com/ducks-project/recaptcha-secure-token/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adrien Loyant",
+            "email": "donald_duck@team-df.org",
+            "homepage": "http://adrien.loyant.net",
+            "role": "Owner"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-openssl": "*",
+        "symfony/polyfill-php80": "^1.28",
+        "symfony/polyfill-php81": "^1.28",
+        "symfony/polyfill-php82": "^1.28",
+        "symfony/polyfill-php83": "^1.28"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.4|^6.0",
+        "phpunit/phpunit": "^9.0",
+        "squizlabs/php_codesniffer": "^3.0",
+        "friendsofphp/php-cs-fixer": "^3.0"
+    },
+    "replace": {
+        "symfony/polyfill-php72": "*",
+        "symfony/polyfill-php73": "*",
+        "symfony/polyfill-php74": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "DucksProject\\Component\\RecaptchaSecureToken\\": ""
+        },
+        "files": [
+            "bootstrap.php"
+        ],
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
