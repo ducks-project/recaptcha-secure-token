@@ -1,6 +1,6 @@
 <?php
 
-namespace DucksProject\Component\RecaptchaSecureToken;
+namespace Ducks\Component\RecaptchaSecureToken;
 
 class Manager implements ManagerInterface
 {
